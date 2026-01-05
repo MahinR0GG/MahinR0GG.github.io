@@ -12,7 +12,7 @@ const introdata = {
         third: "I solve complex problems",
     },
     description: "Energetic and proficient MCA graduate with expertise in AI/ML, web development, and data science. Passionate about creating innovative solutions and contributing to organizational growth through technical excellence.",
-    your_img_url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    your_img_url: require("./assets/images/Media.jpg"),
 };
 
 const dataabout = {
@@ -88,27 +88,32 @@ const services = [{
 const dataportfolio = [{
     img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d",
     description: "MediScan - Medical data extraction system using FastAPI, Streamlit, OpenCV, and Tesseract OCR for automated patient information processing.",
-    link: "#",
+    link: "https://github.com/MahinR0GG/MediScan",
+},
+{
+    img: "https://www.shutterstock.com/image-illustration/air-quality-index-infographic-value-ranges-2657939899",
+    description: "AQI Prediction SystemA machine learning based AQI prediction system using air quality data of various cities in India, with a Streamlit web interface.",
+    link: "https://github.com/MahinR0GG/AQI-Prediction-System",
 },
 {
     img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
     description: "Decision Based Intrusion Detection System - Dynamic IDS using ensemble learning that selects optimal ML models based on attack types.",
-    link: "#",
+    link: "https://github.com/MahinR0GG/Decision-Based-IDS-Using-Machine-Learning",
 },
 {
     img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
     description: "Customer Segmentation - K-Means and DBSCAN clustering application with Streamlit GUI for targeted marketing and personalized recommendations.",
-    link: "#",
+    link: "https://github.com/MahinR0GG/Customer-Segmentation",
 },
 {
     img: "https://images.unsplash.com/photo-1615461066841-6116e61058f4",
     description: "Bridging Lives - Blood donation platform connecting donors and recipients, facilitating life-saving connections in local communities.",
-    link: "#",
+    link: "https://github.com/MahinR0GG/BridgingLives-Blood-Donation-Website-",
 },
 {
     img: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b",
     description: "FitHub - Comprehensive fitness tracking web application with personalized workout plans, BMI calculator, and progress monitoring.",
-    link: "#",
+    link: "https://github.com/MahinR0GG/Project-FitHub",
 },
 ];
 
@@ -118,17 +123,17 @@ const contactConfig = {
     description: "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out to me!",
     // creat an emailjs.com account 
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-    YOUR_SERVICE_ID: "service_id",
-    YOUR_TEMPLATE_ID: "template_id",
-    YOUR_USER_ID: "user_id",
+    YOUR_SERVICE_ID: "service_c87hmdo",
+    YOUR_TEMPLATE_ID: "template_i8pp03s",
+    YOUR_USER_ID: "H0406TzMfe__UE_xP",
 };
 
 const socialprofils = {
     github: "https://github.com/MahinR0GG",
     linkedin: "https://www.linkedin.com/in/mahin-s",
     // Add your actual social media links here
-    facebook: "https://facebook.com",
-    twitter: "https://twitter.com",
+    // facebook: "https://facebook.com",
+    // twitter: "https://twitter.com",
 };
 
 export {
