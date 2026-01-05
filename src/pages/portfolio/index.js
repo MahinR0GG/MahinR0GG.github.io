@@ -5,6 +5,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import { dataportfolio, meta } from "../../content_option";
 
 export const Portfolio = () => {
+  // Array of colors to cycle through
+  const colors = ['#6B7280', '#8B4049', '#4B5563', '#7D3C48', '#374151', '#6B3540'];
+
   return (
     <HelmetProvider>
       <Container className="About-header">
@@ -23,10 +26,13 @@ export const Portfolio = () => {
           {dataportfolio.map((data, i) => {
             return (
               <div key={i} className="po_item">
-                <img src={data.img} alt="" />
+                <div
+                  className="po_item_bg"
+                  style={{ backgroundColor: colors[i % colors.length] }}
+                ></div>
                 <div className="content">
                   <p>{data.description}</p>
-                  <a href={data.link}>view project</a>
+                  <a href={data.link} target="_blank" rel="noopener noreferrer">view project</a>
                 </div>
               </div>
             );
