@@ -29,7 +29,9 @@ export const Portfolio = () => {
                 <div
                   className="po_item_bg"
                   style={{ backgroundColor: colors[i % colors.length] }}
-                ></div>
+                >
+                  <h3 className="po_item_title">{data.title}</h3>
+                </div>
                 <div className="content">
                   <p>{data.description}</p>
                   <a href={data.link} target="_blank" rel="noopener noreferrer">view project</a>
