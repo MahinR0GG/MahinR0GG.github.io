@@ -87,32 +87,44 @@ const services = [{
 
 const dataportfolio = [{
     img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d",
-    description: "MediScan - Medical data extraction system using FastAPI, Streamlit, OpenCV, and Tesseract OCR for automated patient information processing.",
+    title: "MediScan",
+    description: "Medical data extraction using FastAPI, Streamlit, OpenCV, and Tesseract OCR.",
     link: "https://github.com/MahinR0GG/MediScan",
 },
 {
-    img: "https://www.shutterstock.com/image-illustration/air-quality-index-infographic-value-ranges-2657939899",
-    description: "AQI Prediction SystemA machine learning based AQI prediction system using air quality data of various cities in India, with a Streamlit web interface.",
+    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
+    title: "Student Management System",
+    description: "Full-stack student management platform built with Django REST APIs and Angular frontend.",
+    link: "https://github.com/MahinR0GG/Student-Management-System",
+},
+{
+    img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+    title: "AQI Prediction System",
+    description: "ML-based air quality prediction system for Indian cities with Streamlit interface.",
     link: "https://github.com/MahinR0GG/AQI-Prediction-System",
 },
 {
     img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
-    description: "Decision Based Intrusion Detection System - Dynamic IDS using ensemble learning that selects optimal ML models based on attack types.",
+    title: "Decision Based IDS",
+    description: "Dynamic IDS using ensemble learning to select optimal models for different attack types.",
     link: "https://github.com/MahinR0GG/Decision-Based-IDS-Using-Machine-Learning",
 },
 {
     img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-    description: "Customer Segmentation - K-Means and DBSCAN clustering application with Streamlit GUI for targeted marketing and personalized recommendations.",
+    title: "Customer Segmentation",
+    description: "Customer segmentation using K-Means and DBSCAN clustering with Streamlit GUI.",
     link: "https://github.com/MahinR0GG/Customer-Segmentation",
 },
 {
     img: "https://images.unsplash.com/photo-1615461066841-6116e61058f4",
-    description: "Bridging Lives - Blood donation platform connecting donors and recipients, facilitating life-saving connections in local communities.",
+    title: "Bridging Lives",
+    description: "Blood donation platform connecting donors and recipients in local communities.",
     link: "https://github.com/MahinR0GG/BridgingLives-Blood-Donation-Website-",
 },
 {
     img: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b",
-    description: "FitHub - Comprehensive fitness tracking web application with personalized workout plans, BMI calculator, and progress monitoring.",
+    title: "FitHub",
+    description: "Fitness tracking web app with personalized workout plans and BMI calculator.",
     link: "https://github.com/MahinR0GG/Project-FitHub",
 },
 ];
