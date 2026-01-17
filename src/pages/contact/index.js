@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import * as emailjs from "emailjs-com";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { meta } from "../../content_option";
@@ -19,42 +18,58 @@ export const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormdata({ loading: true });
+    setFormdata({ ...formData, loading: true });
 
-    const templateParams = {
-      from_name: formData.email,
-      user_name: formData.name,
-      to_name: contactConfig.YOUR_EMAIL,
-      message: formData.message,
-    };
+    // Create a hidden iframe to submit the form without redirecting
+    const iframe = document.createElement('iframe');
+    iframe.name = 'hidden_iframe';
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
 
-    emailjs
-      .send(
-        contactConfig.YOUR_SERVICE_ID,
-        contactConfig.YOUR_TEMPLATE_ID,
-        templateParams,
-        contactConfig.YOUR_USER_ID
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setFormdata({
-            loading: false,
-            alertmessage: "SUCCESS! ,Thankyou for your messege",
-            variant: "success",
-            show: true,
-          });
-        },
-        (error) => {
-          console.log(error.text);
-          setFormdata({
-            alertmessage: `Faild to send!,${error.text}`,
-            variant: "danger",
-            show: true,
-          });
-          document.getElementsByClassName("co_alert")[0].scrollIntoView();
-        }
-      );
+    // Create a temporary form
+    const form = document.createElement('form');
+    form.action = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdCpYjjAF1jBrBPs6_QQykL5pRMr-w4hAzdrzx25teDDvLXrA/formResponse';
+    form.method = 'POST';
+    form.target = 'hidden_iframe';
+
+    // Add form fields
+    const nameField = document.createElement('input');
+    nameField.type = 'hidden';
+    nameField.name = 'entry.1913926375';
+    nameField.value = formData.name;
+    form.appendChild(nameField);
+
+    const emailField = document.createElement('input');
+    emailField.type = 'hidden';
+    emailField.name = 'entry.51311629';
+    emailField.value = formData.email;
+    form.appendChild(emailField);
+
+    const messageField = document.createElement('input');
+    messageField.type = 'hidden';
+    messageField.name = 'entry.1093299521';
+    messageField.value = formData.message;
+    form.appendChild(messageField);
+
+    // Submit the form
+    document.body.appendChild(form);
+    form.submit();
+
+    // Show success message
+    setTimeout(() => {
+      setFormdata({
+        email: "",
+        name: "",
+        message: "",
+        loading: false,
+        alertmessage: "SUCCESS! Thank you for your message",
+        variant: "success",
+        show: true,
+      });
+      // Clean up
+      document.body.removeChild(form);
+      document.body.removeChild(iframe);
+    }, 1000);
   };
 
   const handleChange = (e) => {
@@ -83,9 +98,8 @@ export const ContactUs = () => {
             <Alert
               //show={formData.show}
               variant={formData.variant}
-              className={`rounded-0 co_alert ${
-                formData.show ? "d-block" : "d-none"
-              }`}
+              className={`rounded-0 co_alert ${formData.show ? "d-block" : "d-none"
+                }`}
               onClose={() => setFormdata({ show: false })}
               dismissible
             >
