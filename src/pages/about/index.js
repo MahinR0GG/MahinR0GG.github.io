@@ -7,7 +7,8 @@ import {
   meta,
   worktimeline,
   skills,
-  services,
+  experience,
+  certifications,
 } from "../../content_option";
 
 export const About = () => {
@@ -37,22 +38,25 @@ export const About = () => {
         </Row>
         <Row className=" sec_sp">
           <Col lg="5">
-            <h3 className="color_sec py-4">Work Timline</h3>
+            <h3 className="color_sec py-4">Education</h3>
           </Col>
           <Col lg="7">
-            <table className="table caption-top">
-              <tbody>
-                {worktimeline.map((data, i) => {
-                  return (
-                    <tr key={i}>
-                      <th scope="row">{data.jobtitle}</th>
-                      <td>{data.where}</td>
-                      <td>{data.date}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+            {worktimeline.map((data, i) => {
+              return (
+                <div key={i} className="education-item mb-4">
+                  <h4 className="education-title">{data.jobtitle}</h4>
+                  <p className="education-institution">{data.where}</p>
+                  <p className="education-duration">{data.date}</p>
+                  {data.details && (
+                    <ul className="education-details">
+                      {data.details.map((detail, idx) => (
+                        <li key={idx}>{detail}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              );
+            })}
           </Col>
         </Row>
         <Row className="sec_sp">
@@ -60,38 +64,57 @@ export const About = () => {
             <h3 className="color_sec py-4">Skills</h3>
           </Col>
           <Col lg="7">
-            {skills.map((data, i) => {
-              return (
-                <div key={i}>
-                  <h3 className="progress-title">{data.name}</h3>
-                  <div className="progress">
-                    <div
-                      className="progress-bar"
-                      style={{
-                        width: `${data.value}%`,
-                      }}
-                    >
-                      <div className="progress-value">{data.value}%</div>
+            <div className="skills-grid">
+              {skills.map((data, i) => {
+                return (
+                  <div key={i} className="skill-tile">
+                    <div className="skill-content">
+                      <h4 className="skill-name">{data.name}</h4>
+                      <p className="skill-description">{data.description}</p>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </Col>
         </Row>
         <Row className="sec_sp">
-          <Col lang="5">
-            <h3 className="color_sec py-4">services</h3>
+          <Col lg="5">
+            <h3 className="color_sec py-4">Experience & Certifications</h3>
           </Col>
           <Col lg="7">
-            {services.map((data, i) => {
-              return (
-                <div className="service_ py-4" key={i}>
-                  <h5 className="service__title">{data.title}</h5>
-                  <p className="service_desc">{data.description}</p>
-                </div>
-              );
-            })}
+            {/* Experience Section */}
+            <div className="experience-section mb-5">
+              <h4 className="subsection-title">Experience</h4>
+              {experience.map((data, i) => {
+                return (
+                  <div key={i} className={`experience-item ${data.current ? 'current-role' : ''}`}>
+                    <div className="experience-header">
+                      <h5 className="experience-role">
+                        {data.role}
+                        {data.current && <span className="current-badge">●</span>}
+                      </h5>
+                      <p className="experience-company">{data.company}</p>
+                      <p className="experience-period">{data.period}</p>
+                    </div>
+                    <p className="experience-description">{data.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Certifications Section */}
+            <div className="certifications-section">
+              <h4 className="subsection-title">Certifications</h4>
+              {certifications.map((data, i) => {
+                return (
+                  <div key={i} className="certification-item">
+                    <h5 className="certification-title">{data.title}</h5>
+                    <p className="certification-issuer">{data.issuer} • {data.year}</p>
+                  </div>
+                );
+              })}
+            </div>
           </Col>
         </Row>
       </Container>

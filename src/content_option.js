@@ -20,55 +20,114 @@ const dataabout = {
     aboutme: "I'm a Master of Computer Application graduate from TKM College of Engineering with a CGPA of 8.4. Dedicated to continuous learning and adapting to new challenges, I strive to contribute innovative solutions to achieve organizational goals. My expertise spans across AI/ML, web development, and data science, with hands-on experience in building real-world applications. I'm passionate about collaborating with teams to enhance productivity and drive success through technical excellence and strategic problem-solving.",
 };
 
-const worktimeline = [{
-    jobtitle: "Master of Computer Application",
-    where: "TKM College of Engineering, Kollam",
-    date: "2023 - 2025",
-},
-{
-    jobtitle: "Bachelor of Computer Application",
-    where: "Bharathamatha College, Palakkad",
-    date: "2020 - 2023",
-},
-{
-    jobtitle: "AI-ML Skills-Build Internship",
-    where: "CSRBOX & IBM",
-    date: "2024",
-},
+const worktimeline = [
+    {
+        jobtitle: "Master of Computer Application (MCA)",
+        where: "TKM College of Engineering, Kollam",
+        date: "2023 – 2025",
+        details: [
+            "Focused on Machine Learning, Data Analytics, and Full-Stack Development",
+            "Built real-world projects including an Intrusion Detection System and OCR-based applications",
+            "CGPA: 8.4"
+        ]
+    },
+    {
+        jobtitle: "Bachelor of Computer Application (BCA)",
+        where: "Bharathamatha College of Arts & Science, Palakkad",
+        date: "2020 – 2023",
+        details: [
+            "Strong foundation in programming, databases, and web development",
+            "Developed academic and personal projects using PHP, JavaScript, and MySQL",
+            "CGPA: 7.2"
+        ]
+    },
+    {
+        jobtitle: "Higher Secondary Education (Science)",
+        where: "Chinmaya Vidyalaya, Palakkad",
+        date: "2019 – 2020",
+        details: [
+            "Built strong fundamentals in Science and Mathematics",
+            "Developed logical thinking and problem-solving skills",
+            "Percentage: 78%"
+        ]
+    },
 ];
 
-const skills = [{
-    name: "Python",
-    value: 90,
-},
-{
-    name: "Java",
-    value: 80,
-},
-{
-    name: "C",
-    value: 75,
-},
-{
-    name: "HTML/CSS",
-    value: 85,
-},
-{
-    name: "JavaScript",
-    value: 75,
-},
-{
-    name: "Machine Learning",
-    value: 85,
-},
-{
-    name: "Git",
-    value: 80,
-},
-{
-    name: "Streamlit",
-    value: 85,
-},
+const skills = [
+    {
+        name: "Python",
+        description: "Data analysis, machine learning models, FastAPI backends, automation scripts"
+    },
+    {
+        name: "Machine Learning",
+        description: "Classification, clustering, ensemble models, intrusion detection systems"
+    },
+    {
+        name: "HTML / CSS",
+        description: "Responsive layouts, modern UI components, portfolio and dashboard design"
+    },
+    {
+        name: "JavaScript",
+        description: "Frontend interactivity, form handling, dynamic UI behavior"
+    },
+    {
+        name: "Streamlit",
+        description: "Interactive ML dashboards, OCR tools, data-driven web apps"
+    },
+    {
+        name: "Git",
+        description: "Version control, collaborative workflows, branch management"
+    },
+    {
+        name: "Java",
+        description: "Object-oriented programming, problem solving, academic projects"
+    },
+    {
+        name: "C",
+        description: "Programming fundamentals, memory concepts, structured logic"
+    },
+];
+
+const experience = [
+    {
+        role: "Data Science Intern",
+        company: "Luminar Technolab",
+        period: "Jul 2025 – Present",
+        description: "Focus on data preprocessing, exploratory data analysis, and machine learning models using real-world datasets.",
+        current: true
+    },
+    {
+        role: "L1 Support Trainee",
+        company: "Cymonic.ai",
+        period: "Nov 2025 – Present",
+        description: "Involved in Level 1 support operations, incident handling, and ITSM workflows within production environments.",
+        current: true
+    },
+    {
+        role: "AI–ML Intern",
+        company: "CSRBOX & IBM",
+        period: "2024",
+        description: "Hands-on experience with machine learning pipelines, data preprocessing, and model evaluation.",
+        current: false
+    },
+];
+
+const certifications = [
+    {
+        title: "AI–ML Skills-Build Internship",
+        issuer: "CSRBOX & IBM",
+        year: "2024"
+    },
+    {
+        title: "Artificial Intelligence Certification",
+        issuer: "TEACHNOOK × Wissenaire",
+        year: "2024"
+    },
+    {
+        title: "Cybersecurity & Ethical Hacking Workshop",
+        issuer: "CSI Dept, TKM College of Engineering",
+        year: "2024"
+    },
 ];
 
 const services = [{
@@ -154,6 +213,8 @@ export {
     dataportfolio,
     worktimeline,
     skills,
+    experience,
+    certifications,
     services,
     introdata,
     contactConfig,

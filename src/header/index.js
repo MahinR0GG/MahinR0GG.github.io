@@ -1,32 +1,47 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
-import { VscGrabber, VscClose } from "react-icons/vsc";
-import { Link } from "react-router-dom";
-import { logotext ,socialprofils } from "../content_option";
-import Themetoggle from "../components/themetoggle";
+import { logotext, socialprofils } from "../content_option";
 
 const Headermain = () => {
   const [isActive, setActive] = useState("false");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
 
   const handleToggle = () => {
     setActive(!isActive);
     document.body.classList.toggle("ovhidden");
   };
 
+  const toggleTheme = (e) => {
+    e.preventDefault();
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+  };
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    handleToggle();
+  };
+
   return (
     <>
       <header className="fixed-top site__header">
         <div className="d-flex align-items-center justify-content-between">
-          <Link  className="navbar-brand nav_ac" to="/">
+          <a
+            className="navbar-brand nav_ac logo-theme-toggle"
+            href="#home"
+            onClick={toggleTheme}
+            title="Click to toggle dark/light mode"
+          >
             {logotext}
-          </Link>
-          <div className="d-flex align-items-center">
-          <Themetoggle />
-          <button className="menu__button  nav_ac" onClick={handleToggle}>
-            {!isActive ? <VscClose /> : <VscGrabber />}
-          </button>
-          
-          </div>
+          </a>
         </div>
 
         <div className={`site__navigation ${!isActive ? "menu__opend" : ""}`}>
@@ -35,16 +50,16 @@ const Headermain = () => {
               <div className="menu__container p-3">
                 <ul className="the_menu">
                   <li className="menu_item ">
-                  <Link  onClick={handleToggle} to="/" className="my-3">Home</Link>
+                    <a onClick={() => scrollToSection('home')} href="#home" className="my-3">Home</a>
                   </li>
                   <li className="menu_item">
-                    <Link  onClick={handleToggle} to="/portfolio" className="my-3"> Portfolio</Link>
+                    <a onClick={() => scrollToSection('about')} href="#about" className="my-3">About</a>
                   </li>
                   <li className="menu_item">
-                  <Link onClick={handleToggle} to="/about" className="my-3">About</Link>
+                    <a onClick={() => scrollToSection('portfolio')} href="#portfolio" className="my-3">Portfolio</a>
                   </li>
                   <li className="menu_item">
-                  <Link onClick={handleToggle} to="/contact" className="my-3"> Contact</Link>
+                    <a onClick={() => scrollToSection('contact')} href="#contact" className="my-3">Contact</a>
                   </li>
                 </ul>
               </div>
@@ -52,9 +67,9 @@ const Headermain = () => {
           </div>
           <div className="menu_footer d-flex flex-column flex-md-row justify-content-between align-items-md-center position-absolute w-100 p-3">
             <div className="d-flex">
-            <a href={socialprofils.facebook}>Facebook</a>
-            <a href={socialprofils.github}>Github</a>
-            <a href={socialprofils.twitter}>Twitter</a>
+              <a href={socialprofils.facebook}>Facebook</a>
+              <a href={socialprofils.github}>Github</a>
+              <a href={socialprofils.twitter}>Twitter</a>
             </div>
             <p className="copyright m-0">copyright __ {logotext}</p>
           </div>
@@ -64,7 +79,7 @@ const Headermain = () => {
       <div className="br-bottom"></div>
       <div className="br-left"></div>
       <div className="br-right"></div>
-      
+
     </>
   );
 };

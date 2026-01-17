@@ -3,10 +3,14 @@ import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { dataportfolio, meta } from "../../content_option";
+import { useStaggerAnimation } from "../../hooks/ScrollAnimation";
 
 export const Portfolio = () => {
   // Array of colors to cycle through
   const colors = ['#6B7280', '#8B4049', '#4B5563', '#7D3C48', '#374151', '#6B3540'];
+
+  // Use stagger animation hook
+  const [containerRef, visibleIndices] = useStaggerAnimation(dataportfolio.length);
 
   return (
     <HelmetProvider>
@@ -22,10 +26,13 @@ export const Portfolio = () => {
             <hr className="t_border my-4 ml-0 text-left" />
           </Col>
         </Row>
-        <div className="mb-5 po_items_ho">
+        <div className="mb-5 po_items_ho" ref={containerRef}>
           {dataportfolio.map((data, i) => {
             return (
-              <div key={i} className="po_item">
+              <div
+                key={i}
+                className={`po_item ${visibleIndices.includes(i) ? 'animate-in' : ''}`}
+              >
                 <div
                   className="po_item_bg"
                   style={{ backgroundColor: colors[i % colors.length] }}
@@ -34,7 +41,12 @@ export const Portfolio = () => {
                 </div>
                 <div className="content">
                   <p>{data.description}</p>
-                  <a href={data.link} target="_blank" rel="noopener noreferrer">view project</a>
+                  <a href={data.link} target="_blank" rel="noopener noreferrer">
+                    view project
+                    <div className="ring one"></div>
+                    <div className="ring two"></div>
+                    <div className="ring three"></div>
+                  </a>
                 </div>
               </div>
             );
