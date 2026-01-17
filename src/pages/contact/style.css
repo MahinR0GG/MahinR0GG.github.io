@@ -22,7 +22,7 @@ button.btn.ac_btn:hover {
     left: 0;
     right: 0;
     height: 10px;
-    z-index: 999999999;
+    z-index: 9998;
     background: var(--text-color);
     transform: translateX(100%);
     animation: shift-rightwards 1s ease-in-out infinite;
@@ -33,12 +33,15 @@ button.btn.ac_btn:hover {
     0% {
         transform: translateX(-100%);
     }
+
     40% {
         transform: translateX(0%);
     }
+
     60% {
         transform: translateX(0%);
     }
+
     100% {
         transform: translateX(100%);
     }

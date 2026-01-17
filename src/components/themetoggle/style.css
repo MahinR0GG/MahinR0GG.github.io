@@ -1,6 +1,6 @@
 .theme_toggler {
     background: var(--primary-color);
-    z-index: 999999999;
+    z-index: 9998;
     left: 10px;
     background: var(--primary-color);
     display: flex;

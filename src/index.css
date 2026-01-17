@@ -34,7 +34,7 @@ body {
     font-family: 'Raleway', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding-top: 60px;
+    padding-top: 0;
     border-left: 10px solid var(--primary-color);
     border-right: 10px solid var(--primary-color);
 }
@@ -76,7 +76,7 @@ code {
 }
 
 .cursor__dot div {
-    z-index: 999999 !important;
+    z-index: 10002 !important;
 }
 
 .cursor__dot div:last-child {
