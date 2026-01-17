@@ -111,6 +111,12 @@ export const About = () => {
                   <div key={i} className="certification-item">
                     <h5 className="certification-title">{data.title}</h5>
                     <p className="certification-issuer">{data.issuer} • {data.year}</p>
+                    <a href={data.link} target="_blank" rel="noopener noreferrer" className="cert-btn">
+                      View Certificate
+                      <div className="ring one"></div>
+                      <div className="ring two"></div>
+                      <div className="ring three"></div>
+                    </a>
                   </div>
                 );
               })}

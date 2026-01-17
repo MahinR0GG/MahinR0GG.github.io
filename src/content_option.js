@@ -116,17 +116,20 @@ const certifications = [
     {
         title: "AI–ML Skills-Build Internship",
         issuer: "CSRBOX & IBM",
-        year: "2024"
+        year: "2024",
+        link: "https://drive.google.com/file/d/1GAhCEPqZSYRfnACHLW40Fe6MhlB6EppM/view?usp=sharing"
     },
     {
         title: "Artificial Intelligence Certification",
         issuer: "TEACHNOOK × Wissenaire",
-        year: "2024"
+        year: "2024",
+        link: "https://drive.google.com/file/d/1iu7pwmgTezMGd0CnDQVEG4S-CizpUIDS/view?usp=sharing"
     },
     {
         title: "Cybersecurity & Ethical Hacking Workshop",
         issuer: "CSI Dept, TKM College of Engineering",
-        year: "2024"
+        year: "2024",
+        link: "https://drive.google.com/file/d/1XxJPSxuAOQ0QdTsyTZuA0x2smcutPofp/view?usp=sharing"
     },
 ];
 

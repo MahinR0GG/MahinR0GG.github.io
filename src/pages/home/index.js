@@ -62,6 +62,16 @@ export const Home = () => {
                     </div>
                   </a>
                 </div>
+                <div className="resume_btn-action">
+                  <a href="https://drive.google.com/file/d/15AvEe2uWTg644UgKnNxN58EPolVPts9O/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <div id="button_resume" className="ac_btn btn">
+                      Download Resume
+                      <div className="ring one"></div>
+                      <div className="ring two"></div>
+                      <div className="ring three"></div>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
