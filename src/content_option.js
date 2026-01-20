@@ -8,8 +8,8 @@ const introdata = {
     title: "I'm Mahin S",
     animated: {
         first: "I build intelligent systems",
-        second: "I develop web applications",
-        third: "I solve complex problems",
+        second: "I craft scalable web applications",
+        third: "I solve problems that don’t have easy answers",
     },
     description: "Energetic and proficient MCA graduate with expertise in AI/ML, web development, and data science. Passionate about creating innovative solutions and contributing to organizational growth through technical excellence.",
     your_img_url: require("./assets/images/Media.jpg"),
@@ -17,7 +17,7 @@ const introdata = {
 
 const dataabout = {
     title: "About Me",
-    aboutme: "I'm a Master of Computer Application graduate from TKM College of Engineering with a CGPA of 8.4. Dedicated to continuous learning and adapting to new challenges, I strive to contribute innovative solutions to achieve organizational goals. My expertise spans across AI/ML, web development, and data science, with hands-on experience in building real-world applications. I'm passionate about collaborating with teams to enhance productivity and drive success through technical excellence and strategic problem-solving.",
+    aboutme: "I'm a Master of Computer Application graduate from TKM College of Engineering. Dedicated to continuous learning and adapting to new challenges, I strive to contribute innovative solutions to achieve organizational goals. My expertise spans across AI/ML, web development, and data science, with hands-on experience in building real-world applications. I'm passionate about collaborating with teams to enhance productivity and drive success through technical excellence and strategic problem-solving.",
 };
 
 const worktimeline = [
@@ -97,10 +97,10 @@ const experience = [
         current: true
     },
     {
-        role: "L1 Support Trainee",
+        role: "L2 Support Trainee",
         company: "Cymonic.ai",
         period: "Nov 2025 – Present",
-        description: "Involved in Level 1 support operations, incident handling, and ITSM workflows within production environments.",
+        description: "Involved in Level 2 support operations, incident handling, SLA configuring, and ITSM workflows within production environments.",
         current: true
     },
     {
