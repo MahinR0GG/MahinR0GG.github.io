@@ -79,12 +79,12 @@ const skills = [
         description: "Version control, collaborative workflows, branch management"
     },
     {
-        name: "Java",
-        description: "Object-oriented programming, problem solving, academic projects"
+        name: "Deep Learning",
+        description: "Neural networks, NLP models, generative AI, LangChain integration"
     },
     {
-        name: "C",
-        description: "Programming fundamentals, memory concepts, structured logic"
+        name: "Django",
+        description: "REST APIs, backend development, ORM, full-stack web applications"
     },
 ];
 
@@ -97,7 +97,7 @@ const experience = [
         current: true
     },
     {
-        role: "L2 Support Trainee",
+        role: "L2 Consultant Trainee",
         company: "Cymonic.ai",
         period: "Nov 2025 – Present",
         description: "Involved in Level 2 support operations, incident handling, SLA configuring, and ITSM workflows within production environments.",
@@ -114,6 +114,12 @@ const experience = [
 
 const certifications = [
     {
+        title: "Introduction to Natural Language Processing",
+        issuer: "Great Learning",
+        year: "2023",
+        link: "https://drive.google.com/file/d/1_dku8rGTviJ_wByptR_nzFabCRq8PnLD/view?usp=sharing"
+    },
+    {
         title: "AI–ML Skills-Build Internship",
         issuer: "CSRBOX & IBM",
         year: "2024",
@@ -124,6 +130,18 @@ const certifications = [
         issuer: "TEACHNOOK × Wissenaire",
         year: "2024",
         link: "https://drive.google.com/file/d/1iu7pwmgTezMGd0CnDQVEG4S-CizpUIDS/view?usp=sharing"
+    },
+    {
+        title: "Cloud Computing",
+        issuer: "NPTEL",
+        year: "2024",
+        link: "https://drive.google.com/file/d/1gyirsh2w5pH7fNaLw7sGlLAlxzgWkm-B/view?usp=sharing"
+    },
+    {
+        title: "Introduction to Internet of Things",
+        issuer: "NPTEL",
+        year: "2024",
+        link: "https://drive.google.com/file/d/1R_jvpChyx3gm7LjNqRqkZNx6GGhmGdh9/view?usp=sharing"
     },
     {
         title: "Cybersecurity & Ethical Hacking Workshop",
@@ -188,6 +206,18 @@ const dataportfolio = [{
     title: "FitHub",
     description: "Fitness tracking web app with personalized workout plans and BMI calculator.",
     link: "https://github.com/MahinR0GG/Project-FitHub",
+},
+{
+    img: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a",
+    title: "ITSM Support Bot",
+    description: "Production-ready ITSM chatbot with Streamlit UI built on LangChain and Google Generative AI. (Under progress)",
+    link: "https://github.com/MahinR0GG/ITSM-Support-Bot",
+},
+{
+    img: "https://images.unsplash.com/photo-1553877522-43269d4ea984",
+    title: "WorkMate",
+    description: "Your smart HR assistant that simplifies policies, leave, and workplace tasks in one place. (Under progress)",
+    link: "https://github.com/MahinR0GG/WorkMate",
 },
 ];
 
