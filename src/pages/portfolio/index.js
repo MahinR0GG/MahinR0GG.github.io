@@ -33,6 +33,12 @@ export const Portfolio = () => {
                 key={i}
                 className={`po_item ${visibleIndices.includes(i) ? 'animate-in' : ''}`}
               >
+                {data.status === 'inprogress' && (
+                  <div className="progress-badge">
+                    <span className="progress-dot"></span>
+                    <span className="progress-text">In Progress</span>
+                  </div>
+                )}
                 <div
                   className="po_item_bg"
                   style={{ backgroundColor: colors[i % colors.length] }}

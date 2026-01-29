@@ -170,54 +170,63 @@ const dataportfolio = [{
     title: "MediScan",
     description: "Medical data extraction using FastAPI, Streamlit, OpenCV, and Tesseract OCR.",
     link: "https://github.com/MahinR0GG/MediScan",
+    status: "completed"
 },
 {
     img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
     title: "Student Management System",
     description: "Full-stack student management platform built with Django REST APIs and Angular frontend.",
     link: "https://github.com/MahinR0GG/Student-Management-System",
+    status: "completed"
 },
 {
     img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
     title: "AQI Prediction System",
     description: "ML-based air quality prediction system for Indian cities with Streamlit interface.",
     link: "https://github.com/MahinR0GG/AQI-Prediction-System",
+    status: "completed"
 },
 {
     img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
     title: "Decision Based IDS",
     description: "Dynamic IDS using ensemble learning to select optimal models for different attack types.",
     link: "https://github.com/MahinR0GG/Decision-Based-IDS-Using-Machine-Learning",
+    status: "completed"
 },
 {
     img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
     title: "Customer Segmentation",
     description: "Customer segmentation using K-Means and DBSCAN clustering with Streamlit GUI.",
     link: "https://github.com/MahinR0GG/Customer-Segmentation",
+    status: "completed"
 },
 {
     img: "https://images.unsplash.com/photo-1615461066841-6116e61058f4",
     title: "Bridging Lives",
     description: "Blood donation platform connecting donors and recipients in local communities.",
     link: "https://github.com/MahinR0GG/BridgingLives-Blood-Donation-Website-",
+    status: "completed"
 },
 {
     img: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b",
     title: "FitHub",
     description: "Fitness tracking web app with personalized workout plans and BMI calculator.",
     link: "https://github.com/MahinR0GG/Project-FitHub",
+    status: "completed"
 },
 {
     img: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a",
     title: "ITSM Support Bot",
-    description: "Production-ready ITSM chatbot with Streamlit UI built on LangChain and Google Generative AI. (Under progress)",
+    description: "Production-ready ITSM chatbot with Streamlit UI built on LangChain and Google Generative AI.",
     link: "https://github.com/MahinR0GG/ITSM-Support-Bot",
+    status: "inprogress"
 },
 {
     img: "https://images.unsplash.com/photo-1553877522-43269d4ea984",
     title: "WorkMate",
-    description: "Your smart HR assistant that simplifies policies, leave, and workplace tasks in one place. (Under progress)",
+    description: "Your smart HR assistant that simplifies policies, leave, and workplace tasks in one place.",
     link: "https://github.com/MahinR0GG/WorkMate",
+    status: "inprogress"
 },
 ];
 

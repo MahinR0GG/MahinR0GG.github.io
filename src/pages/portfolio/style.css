@@ -189,3 +189,60 @@
         transform: translateZ(0);
     }
 }
+
+/* Progress Badge Styles */
+.progress-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(220, 38, 38, 0.95);
+    padding: 6px 12px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.4);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+.progress-badge:hover {
+    background: rgba(220, 38, 38, 1);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.6);
+}
+
+.progress-dot {
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.progress-text {
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(0.9);
+    }
+}
+
+/* Light theme adjustments */
+[data-theme="light"] .progress-badge {
+    background: rgba(220, 38, 38, 0.9);
+}
